@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cervecera VGB — Tu asistente cervecero offline</title>
+<meta name="description" content="Cervecera VGB: app offline para diseñar recetas con motor Tinseth, Morey y Palmer. Android y escritorio (Windows, Linux, macOS).">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171a21; --panel2:#1e232d; --line:#2a2f3a;
+    --text:#e8eaed; --muted:#9aa0a6; --accent:#f59e0b; --accent2:#10b981;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--text);line-height:1.6}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 22px}
+  /* HERO */
+  .hero{padding:72px 0 44px;text-align:center;
+        background:radial-gradient(1200px 500px at 50% -10%, rgba(245,158,11,.16), transparent 70%)}
+  .hero .chip{display:inline-block;font-size:13px;color:var(--accent);border:1px solid var(--line);
+              border-radius:999px;padding:4px 14px;margin-bottom:18px}
+  .hero h1{font-size:46px;margin:0 0 10px;line-height:1.1}
+  .hero p{font-size:19px;color:var(--muted);margin:0 auto;max-width:640px}
+  .hero .sub{margin-top:14px;font-size:14px;color:var(--muted)}
+  .btns{margin-top:30px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;font-size:16px}
+  .btn.primary{background:var(--accent);color:#14120b}
+  .btn.ghost{border:1px solid var(--line);color:var(--text)}
+  .btn.ghost:hover{background:var(--panel2)}
+  /* FEATURES */
+  section{padding:44px 0}
+  h2{font-size:28px;margin:0 0 20px;text-align:center}
+  h2 small{display:block;font-size:14px;color:var(--muted);font-weight:400;margin-top:6px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .card .ico{font-size:26px}
+  .card h3{margin:10px 0 6px;font-size:18px}
+  .card p{margin:0;color:var(--muted);font-size:15px}
+  /* PLATAFORMAS */
+  .platforms{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+  .plat{background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:20px;text-align:center}
+  .plat .ico{font-size:34px}
+  .plat h3{margin:10px 0 6px;font-size:17px}
+  .plat p{margin:0 0 12px;color:var(--muted);font-size:14px}
+  .plat .min{font-size:13px;color:var(--muted)}
+  .footer{text-align:center;color:var(--muted);font-size:14px;padding:40px 0 60px;border-top:1px solid var(--line)}
+  .badge{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:8px;
+         padding:6px 12px;margin:6px 4px;font-size:13px;color:var(--text)}
+</style>
+</head>
+<body>
+
+  <div class="hero">
+    <div class="wrap">
+      <span class="chip">🍺 App offline · Sin suscripciones · Sin nube</span>
+      <h1>Cervecera VGB</h1>
+      <p>Diseñá tus recetas de cerveza con precisión técnica profesional:
+         motor Tinseth, Morey y Palmer, más de 80 estilos BJCP 2021,
+         gestión de inventario y estimación de pH.</p>
+      <p class="sub">Disponible en <b>Android</b> y en <b>PC</b> (Windows, Linux y macOS).</p>
+      <div class="btns">
+        <a class="btn primary" href="https://github.com/saintwick47/cervecera_vgb/releases/tag/v1.0.0" target="_blank" rel="noopener">⬇️ Descargar la app</a>
+        <a class="btn ghost" href="https://github.com/saintwick47/cervecera_vgb" target="_blank" rel="noopener">Ver el repositorio</a>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <h2>¿Qué hace?
+        <small>Todo pensado para el cervecero casero y profesional.</small>
+      </h2>
+      <div class="grid">
+        <div class="card"><div class="ico">🧪</div><h3>Motor de cálculos</h3>
+          <p>OG, FG, ABV, IBU (Tinseth), SRM (Morey), BU/GU, calorías y correcciones por altitud.</p></div>
+        <div class="card"><div class="ico">💧</div><h3>Perfil de agua y pH</h3>
+          <p>Alcalinidad residual, pH de entrada, maceración, post-hervor y ácido láctico para fijar pH 5.3.</p></div>
+        <div class="card"><div class="ico">🏅</div><h3>Estilos BJCP 2021</h3>
+          <p>Comparamos tu receta contra más de 80 estilos oficiales y te decimos si está en rango.</p></div>
+        <div class="card"><div class="ico">🌾</div><h3>Catálogo argentino</h3>
+          <p>Maltas, lúpulos, levaduras y aguas de Córdoba para armar la receta al toque.</p></div>
+        <div class="card"><div class="ico">📦</div><h3>Inventario inteligente</h3>
+          <p>Cargá tu stock real y te avisa si te falta algo antes de cocinar.</p></div>
+        <div class="card"><div class="ico">📄</div><h3>Exportación</h3>
+          <p>Generá un PDF profesional o exportá a BeerXML (Brewfather, Grainfather…).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Descargala en tu plataforma
+        <small>Instalación directa, sin registrarse.</small>
+      </h2>
+      <div class="platforms">
+        <div class="plat"><div class="ico">📱</div><h3>Android</h3>
+          <p>APK listo para instalar.</p>
+          <div class="min">CerveceraVGB.apk</div></div>
+        <div class="plat"><div class="ico">🪟</div><h3>Windows</h3>
+          <p>Instalador con acceso directo y logo en el escritorio.</p>
+          <div class="min">CerveceraVGB-Setup-*.exe</div></div>
+        <div class="plat"><div class="ico">🐧</div><h3>Linux</h3>
+          <p>AppImage portable de 64 bits.</p>
+          <div class="min">CerveceraVGB-*-x86_64.AppImage</div></div>
+        <div class="plat"><div class="ico">🍎</div><h3>macOS</h3>
+          <p>DMG para Intel y Apple Silicon.</p>
+          <div class="min">CerveceraVGB-*-macos-*.dmg</div></div>
+      </div>
+      <p style="text-align:center;margin-top:26px;color:var(--muted)">
+        Todos los instaladores se publican con su <b>checksum SHA-256</b> para que verifiques la descarga.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap" style="text-align:center">
+      <h2>Detalles técnicos</h2>
+      <div>
+        <span class="badge">100% offline</span>
+        <span class="badge">Sin nube ni cuentas</span>
+        <span class="badge">Motor Tinseth · Morey · Palmer</span>
+        <span class="badge">+80 estilos BJCP 2021</span>
+        <span class="badge">Catálogo de insumos de Argentina</span>
+        <span class="badge">Exportación PDF y BeerXML</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    <div class="wrap">
+      <p><span style="color:var(--accent)">🍺 Cervecera VGB</span> — Proyecto de código abierto.</p>
+      <p>Repositorio: <a href="https://github.com/saintwick47/cervecera_vgb" target="_blank" rel="noopener">github.com/saintwick47/cervecera_vgb</a></p>
+      <p style="margin-top:10px;font-size:12px">Hecho para la comunidad cervecera 🍻 · Sin publicidad, sin rastreadores.</p>
+    </div>
+  </div>
+
+</body>
+</html>
