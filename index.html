@@ -125,11 +125,41 @@
       </h2>
       <p style="color:var(--muted);max-width:680px;margin:0 auto 18px">
         El recetario incluye <b>66 recetas</b> (estilos clásicos + clones de marcas
-        famosas + recetas nuevas). Cuando se agrega una receta nueva, se actualiza
-        acá. En la app usá el botón <b>"Importar JSON"</b> y elegí el archivo
-        descargado: las recetas se agregan a tu recetario <b>sin reinstalar nada</b>.
+        famosas + recetas nuevas). Cada una trae su <b>estilo BJCP</b>, sus
+        ingredientes reales y sus números verificados. La app además
+        <b>actualiza sola</b> las recetas del recetario cuando mejoran, sin que
+        pierdas las tuyas. En la app usá el botón <b>"Importar JSON"</b> y elegí el
+        archivo descargado: las recetas se agregan a tu recetario
+        <b>sin reinstalar nada</b>.
       </p>
-      <a class="btn primary" href="https://github.com/saintwick47/cervecera_vgb/releases/download/v1.0.0/recetas_cervecera_vgb.json" target="_blank" rel="noopener">⬇️ Descargar recetario (JSON)</a>
+      <a class="btn primary" href="https://github.com/saintwick47/cervecera_vgb/releases/latest/download/recetas_cervecera_vgb.json" target="_blank" rel="noopener">⬇️ Descargar recetario (JSON)</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap" style="text-align:center">
+      <h2>📚 Catálogo de recetas de Brew-o-Matic
+        <small>7.739 recetas públicas, para consultar o descargar.</small>
+      </h2>
+      <p style="color:var(--muted);max-width:760px;margin:0 auto 18px">
+        Reunimos las <b>7.739 recetas públicas</b> de
+        <a href="https://www.brew-o-matic.com.ar/#/public" target="_blank" rel="noopener">Brew-o-Matic</a>
+        (la calculadora libre de Lautaro Cozzani y Somos Cerveceros, licencia MIT)
+        en un solo archivo para que las puedas buscar cómodamente: cada receta trae
+        su <b>estilo BJCP</b>, OG, ABV, IBU, color, litros, autor, fecha y el
+        <b>enlace a su ficha original</b>.
+      </p>
+      <p style="color:var(--muted);max-width:760px;margin:0 auto 18px">
+        Son <b>material de consulta</b>: no vienen dentro de la app. Si alguna te
+        gusta, abrí su enlace, copiá la dirección y usá el importador de recetas
+        para pasarla a tu recetario.
+      </p>
+      <a class="btn primary" href="recetas_brewomatic_catalogo.json" target="_blank" rel="noopener">⬇️ Catálogo completo (JSON · 2,6 MB)</a>
+      <a class="btn" href="recetas_brewomatic_catalogo.csv" target="_blank" rel="noopener" style="margin-left:10px">📊 Planilla (CSV · 1,5 MB)</a>
+      <p style="color:var(--muted);font-size:.85rem;max-width:760px;margin:16px auto 0">
+        Créditos a quienes publicaron cada receta en Brew-o-Matic. Los valores de
+        OG, IBU y color son los publicados por ese sitio.
+      </p>
     </div>
   </section>
 
@@ -174,6 +204,13 @@
           <p>Lote, olla, pérdidas, evaporación (L/h), eficiencia y temperatura de macerado.</p></div>
         <div class="card"><div class="ico">🧪</div><h3>Catálogo editable</h3>
           <p>Maltas, lúpulos y levaduras con sus datos (color, PPG, rendimiento, AA%, atenuación…).</p></div>
+        <div class="card"><div class="ico">✅</div><h3>Validado contra Brew-o-Matic</h3>
+          <p>Las <b>66 recetas</b> del recetario se recalcularon con nuestro motor y se
+             compararon con las originales de Brew-o-Matic: <b>coinciden las 66</b>
+             (diferencia máxima 0,0009 en OG/FG).</p></div>
+        <div class="card"><div class="ico">💧</div><h3>Química del agua</h3>
+          <p>Perfiles de agua por estilo, sales (yeso, CaCl₂, epsom, sal, bicarbonato),
+             dilución con ósmosis y relación SO₄:Cl.</p></div>
       </div>
       <p style="text-align:center;margin-top:20px;color:var(--muted);font-size:13px">
         <b>Fuentes:</b> Tinseth · Rager (brauhaus) · Morey · Brewfather docs ·
