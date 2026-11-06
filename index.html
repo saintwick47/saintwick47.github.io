@@ -51,6 +51,23 @@
   .dl a.primary{background:var(--accent);color:#14120b}
   .dl a.ghost{border:1px solid var(--line);color:var(--text)}
   .dl a.ghost:hover{background:var(--panel2)}
+  /* Recetario: pasos + tabla de recetas */
+  .pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;max-width:720px;margin:0 auto;color:var(--muted);font-size:14px}
+  .pasos > div{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .pasos b{color:var(--text)}
+  .lista-recetas{margin-top:22px}
+  .lista-recetas summary{cursor:pointer;color:var(--accent);font-weight:600;list-style:none}
+  .lista-recetas summary::-webkit-details-marker{display:none}
+  .lista-recetas summary:before{content:"▸ "}
+  .lista-recetas[open] summary:before{content:"▾ "}
+  .tabla-scroll{max-height:420px;overflow:auto;border:1px solid var(--line);border-radius:12px;margin-top:14px}
+  table.recetas{width:100%;border-collapse:collapse;font-size:14px;text-align:left}
+  table.recetas th{position:sticky;top:0;background:var(--panel2);color:var(--text);padding:10px 12px;border-bottom:1px solid var(--line)}
+  table.recetas td{padding:8px 12px;border-bottom:1px solid var(--line);color:var(--muted)}
+  table.recetas tr.grupo td{background:var(--panel2);color:var(--accent);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+  table.recetas tr.grupo .cuenta{opacity:.7;font-weight:400}
+  .nota{color:var(--muted);font-size:13px;margin-top:10px}
+  .badge{display:inline-block;padding:3px 9px;border-radius:999px;font-size:12px;font-weight:700;background:var(--panel2);border:1px solid var(--line);color:var(--muted);margin-left:8px;vertical-align:middle}
   .footer{text-align:center;color:var(--muted);font-size:14px;padding:40px 0 60px;border-top:1px solid var(--line)}
   .badge{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:8px;
          padding:6px 12px;margin:6px 4px;font-size:13px;color:var(--text)}
@@ -151,26 +168,126 @@
 
   <section>
     <div class="wrap" style="text-align:center">
-      <h2>📖 Recetario de recetas
-        <small>Descargá el recetario completo y sumá recetas a tu app sin reinstalar.</small>
+      <h2>📖 Recetario para importar
+        <small>66 recetas completas: ingredientes, agua y estilo BJCP.</small>
       </h2>
-      <p style="color:var(--muted);max-width:680px;margin:0 auto 18px">
-        El recetario incluye <b>66 recetas</b> (estilos clásicos + clones de marcas
-        famosas + recetas nuevas). Cada una trae su <b>estilo BJCP</b>, sus
-        ingredientes reales y sus números verificados. La app además
-        <b>actualiza sola</b> las recetas del recetario cuando mejoran, sin que
-        pierdas las tuyas. En la app usá el botón <b>"Importar JSON"</b> y elegí el
-        archivo descargado: las recetas se agregan a tu recetario
-        <b>sin reinstalar nada</b>.
+      <p style="color:var(--muted);max-width:720px;margin:0 auto 16px">
+        Este es el archivo que <b>sí se importa</b> en la app: cada receta trae sus
+        <b>maltas, lúpulos, levaduras, agua y estilo BJCP</b> listos para calcular.
+        La app ya viene con las 66 cargadas y las <b>actualiza sola</b>; descargar el
+        JSON sirve para agregarlas a mano o pasarlas a otra instalación.
       </p>
-      <a class="btn primary" href="https://github.com/saintwick47/cervecera-vgb/releases/latest/download/recetas_cervecera_vgb.json" target="_blank" rel="noopener">⬇️ Descargar recetario (JSON)</a>
+      <div class="pasos">
+        <div><b>💻 En PC</b><br>Menú <b>Archivo → 📂 Importar JSON</b><br>elegí el archivo descargado.</div>
+        <div><b>📱 En Android</b><br>El recetario se <b>actualiza solo</b> desde la app.<br>En <b>Ajustes → Importar recetas_base.json</b> volvés a cargar las incluidas.</div>
+      </div>
+      <p style="margin:18px 0 6px">
+        <a class="btn primary" href="https://github.com/saintwick47/cervecera-vgb/releases/latest/download/recetas_cervecera_vgb.json" target="_blank" rel="noopener">⬇️ Descargar recetario (JSON · 105 KB)</a>
+      </p>
+      <details class="lista-recetas">
+        <summary>Ver las 66 recetas incluidas</summary>
+        <div class="tabla-scroll">
+          <table class="recetas">
+            <thead><tr><th>Receta</th><th>Estilo BJCP</th></tr></thead>
+            <tbody>
+<tr class="grupo"><td colspan="2">Amber Ale <span class="cuenta">3</span></td></tr>
+<tr><td>Amber Ale 1 - American Amber</td><td>19A - American Amber Ale (BJCP 2015)</td></tr>
+<tr><td>Amber Ale 2 - Irish Red Ale</td><td>15A - Irish Red Ale (BJCP 2015)</td></tr>
+<tr><td>Amber Ale 3 - Belgian Amber</td><td>26A - Trappist Single (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Argentina <span class="cuenta">3</span></td></tr>
+<tr><td>Argentina 1 - Strong Scotch Ale</td><td>17C - Wee Heavy (BJCP 2015)</td></tr>
+<tr><td>Argentina 2 - IPA Argenta</td><td>IPA Argenta</td></tr>
+<tr><td>Argentina 3 - Honey Light Lager</td><td>01A - American Light Lager (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Barleywine <span class="cuenta">2</span></td></tr>
+<tr><td>Barleywine 1 - English Barleywine</td><td>17D - English Barleywine (BJCP 2015)</td></tr>
+<tr><td>Barleywine 2 - American Barleywine</td><td>22C - American Barleywine (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Belgian <span class="cuenta">3</span></td></tr>
+<tr><td>Belgian 1 - Dubbel</td><td>26B - Belgian Dubbel (BJCP 2015)</td></tr>
+<tr><td>Belgian 2 - Tripel</td><td>26C - Belgian Tripel (BJCP 2015)</td></tr>
+<tr><td>Belgian 3 - Golden Strong</td><td>25C - Belgian Golden Strong Ale (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Cream Ale <span class="cuenta">2</span></td></tr>
+<tr><td>Cream Ale 1 - Standard Cream Ale</td><td>01C - Cream Ale (BJCP 2015)</td></tr>
+<tr><td>Cream Ale 2 - Vanilla Cream Ale</td><td>01C - Cream Ale (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">IPA <span class="cuenta">3</span></td></tr>
+<tr><td>IPA 1 - West Coast IPA</td><td>21A - American IPA (BJCP 2015)</td></tr>
+<tr><td>IPA 2 - Hazy IPA</td><td>Neipa</td></tr>
+<tr><td>IPA 3 - American IPA</td><td>21A - American IPA (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Kölsch <span class="cuenta">2</span></td></tr>
+<tr><td>Kölsch 1 - Traditional Kölsch</td><td>05B - Kolsch (BJCP 2015)</td></tr>
+<tr><td>Kölsch 2 - Hoppy Kölsch</td><td>05B - Kolsch (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Lager <span class="cuenta">3</span></td></tr>
+<tr><td>Lager 1 - Munich Helles</td><td>04A - Munich Helles (BJCP 2015)</td></tr>
+<tr><td>Lager 2 - Schwarzbier</td><td>08B - Schwarzbier (BJCP 2015)</td></tr>
+<tr><td>Lager 3 - Vienna Lager</td><td>07A - Vienna Lager (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Negra <span class="cuenta">3</span></td></tr>
+<tr><td>Negra 1 - American Stout</td><td>20B - American Stout (BJCP 2015)</td></tr>
+<tr><td>Negra 2 - Dry Stout</td><td>15B - Irish Stout (BJCP 2015)</td></tr>
+<tr><td>Negra 3 - Sweet Stout</td><td>16A - Sweet Stout (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Pale Ale <span class="cuenta">3</span></td></tr>
+<tr><td>Pale Ale 1 - American Pale Ale</td><td>18B - American Pale Ale (BJCP 2015)</td></tr>
+<tr><td>Pale Ale 2 - English Pale Ale</td><td>11A - Ordinary Bitter (BJCP 2015)</td></tr>
+<tr><td>Pale Ale 3 - Aussie Sparkling Ale</td><td>12B - Australian Sparkling Ale (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Pilsner <span class="cuenta">3</span></td></tr>
+<tr><td>Pilsner 1 - German Pilsner</td><td>05D - German Pils (BJCP 2015)</td></tr>
+<tr><td>Pilsner 2 - Czech Pilsner</td><td>03B - Czech Premium Pale Lager (BJCP 2015)</td></tr>
+<tr><td>Pilsner 3 - Italian Pilsner</td><td>05D - German Pils (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Porter <span class="cuenta">3</span></td></tr>
+<tr><td>Porter 1 - Robust Porter</td><td>20A - American Porter (BJCP 2015)</td></tr>
+<tr><td>Porter 2 - Brown Porter</td><td>13C - English Porter (BJCP 2015)</td></tr>
+<tr><td>Porter 3 - Baltic Porter</td><td>09C - Baltic Porter (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Red Lager <span class="cuenta">3</span></td></tr>
+<tr><td>Red Lager 1 - International Amber Lager</td><td>02B - International Amber Lager (BJCP 2015)</td></tr>
+<tr><td>Red Lager 2 - American Red Lager</td><td>02B - International Amber Lager (BJCP 2015)</td></tr>
+<tr><td>Red Lager 3 - Red Cream Lager</td><td>01C - Cream Ale (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Rubia <span class="cuenta">3</span></td></tr>
+<tr><td>Rubia 1 - Blonde Ale Básica</td><td>18A - Blonde Ale (BJCP 2015)</td></tr>
+<tr><td>Rubia 2 - Honey Blonde Ale</td><td>18A - Blonde Ale (BJCP 2015)</td></tr>
+<tr><td>Rubia 3 - American Blonde</td><td>18A - Blonde Ale (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Saison <span class="cuenta">3</span></td></tr>
+<tr><td>Saison 1 - Farmhouse Ale</td><td>25B - Saison (BJCP 2015)</td></tr>
+<tr><td>Saison 2 - Dark Saison</td><td>25B - Saison (BJCP 2015)</td></tr>
+<tr><td>Saison 3 - Super Saison</td><td>25B - Saison (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Scottish Ale <span class="cuenta">2</span></td></tr>
+<tr><td>Scottish Ale 1 - 60 Shilling</td><td>14A - Scottish Light (BJCP 2015)</td></tr>
+<tr><td>Scottish Ale 2 - 80 Shilling</td><td>14B - Scottish Heavy</td></tr>
+<tr class="grupo"><td colspan="2">Wheat <span class="cuenta">3</span></td></tr>
+<tr><td>Wheat 1 - Hefeweizen</td><td>10A - Weissbier (BJCP 2015)</td></tr>
+<tr><td>Wheat 2 - Dunkelweizen</td><td>10B - Dunkles Weissbier (BJCP 2015)</td></tr>
+<tr><td>Wheat 3 - American Wheat</td><td>01D - American Wheat Beer (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Witbier <span class="cuenta">3</span></td></tr>
+<tr><td>Witbier 1 - Traditional Witbier</td><td>24A - Witbier (BJCP 2015)</td></tr>
+<tr><td>Witbier 2 - Orange Coriander Wit</td><td>24A - Witbier (BJCP 2015)</td></tr>
+<tr><td>Witbier 3 - Black Wit</td><td>24A - Witbier (BJCP 2015)</td></tr>
+<tr class="grupo"><td colspan="2">Otras <span class="cuenta">16</span></td></tr>
+<tr><td>Marca - Sierra Nevada Pale Ale (Clon)</td><td>18B - American Pale Ale (BJCP 2015)</td></tr>
+<tr><td>Marca - Guinness Draught (Clon)</td><td>15B - Irish Stout (BJCP 2015)</td></tr>
+<tr><td>Marca - Pilsner Urquell (Clon)</td><td>03B - Czech Premium Pale Lager (BJCP 2015)</td></tr>
+<tr><td>Marca - Heineken (Clon)</td><td>05D - German Pils (BJCP 2015)</td></tr>
+<tr><td>Marca - Stella Artois (Clon)</td><td>05D - German Pils (BJCP 2015)</td></tr>
+<tr><td>Marca - Weihenstephaner Hefeweizen (Clon)</td><td>10A - Weissbier (BJCP 2015)</td></tr>
+<tr><td>Marca - Duvel (Clon)</td><td>25C - Belgian Golden Strong Ale (BJCP 2015)</td></tr>
+<tr><td>Marca - Stone IPA (Clon)</td><td>21A - American IPA (BJCP 2015)</td></tr>
+<tr><td>Marca - Brooklyn Lager (Clon)</td><td>02B - International Amber Lager (BJCP 2015)</td></tr>
+<tr><td>Marca - Anchor Liberty Ale (Clon)</td><td>18B - American Pale Ale (BJCP 2015)</td></tr>
+<tr><td>Marca - Paulaner Salvator (Clon)</td><td>09B - Eisbock (BJCP 2015)</td></tr>
+<tr><td>Marca - Corona Extra (Clon)</td><td>01A - American Light Lager (BJCP 2015)</td></tr>
+<tr><td>Nueva - NEIPA Tropical Haze</td><td>Neipa</td></tr>
+<tr><td>Nueva - Gose de Frutos Rojos</td><td>27A - Gose (BJCP 2015)</td></tr>
+<tr><td>Nueva - Imperial Stout Café</td><td>20C - Imperial Stout (BJCP 2015)</td></tr>
+<tr><td>Nueva - Oktoberfest Festbier</td><td>06A - Marzen (BJCP 2015)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="nota">La app calcula OG, IBU, color y agua para <b>tu</b> equipo y eficiencia;
+        acá van solo los datos de la receta.</p>
+      </details>
     </div>
   </section>
 
   <section>
     <div class="wrap" style="text-align:center">
-      <h2>📚 Catálogo de recetas de Brew-o-Matic
-        <small>7.739 recetas públicas, para consultar o descargar.</small>
+      <h2>📚 Índice de recetas de Brew-o-Matic <span class="badge">solo consulta</span>
+        <small>7.739 recetas públicas con sus números y el link a cada ficha.</small>
       </h2>
       <p style="color:var(--muted);max-width:760px;margin:0 auto 18px">
         Reunimos las <b>7.739 recetas públicas</b> de
@@ -181,11 +298,15 @@
         <b>enlace a su ficha original</b>.
       </p>
       <p style="color:var(--muted);max-width:760px;margin:0 auto 18px">
-        Son <b>material de consulta</b>: no vienen dentro de la app. Si alguna te
-        gusta, abrí su enlace, copiá la dirección y usá el importador de recetas
-        para pasarla a tu recetario.
+        <b>Ojo:</b> este listado <b>no trae los ingredientes</b> (solo nombre, estilo,
+        OG, ABV, IBU, color, litros y autor), así que <b>no se puede importar</b> a la app.
+        Sirve para descubrir recetas: si alguna te interesa, abrí su enlace en
+        Brew-o-Matic y cargala con el <b>importador</b>.
+        Para usar recetas completas en la app, usá el <b>Recetario de 66</b> de arriba.
+        En <b>Android</b> además hay <b>“Importar Brewomatic”</b> en Equipos/Recetas: pegás el
+        link de una receta y la trae completa.
       </p>
-      <a class="btn primary" href="recetas_brewomatic_catalogo.json" target="_blank" rel="noopener">⬇️ Catálogo completo (JSON · 2,6 MB)</a>
+      <a class="btn" href="recetas_brewomatic_catalogo.json" target="_blank" rel="noopener">⬇️ Índice de 7.739 recetas (JSON · 2,6 MB)</a>
       <a class="btn" href="recetas_brewomatic_catalogo.csv" target="_blank" rel="noopener" style="margin-left:10px">📊 Planilla (CSV · 1,5 MB)</a>
       <p style="color:var(--muted);font-size:.85rem;max-width:760px;margin:16px auto 0">
         Créditos a quienes publicaron cada receta en Brew-o-Matic. Los valores de
