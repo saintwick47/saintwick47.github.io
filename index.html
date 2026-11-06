@@ -44,7 +44,13 @@
   .plat .ico{font-size:34px}
   .plat h3{margin:10px 0 6px;font-size:17px}
   .plat p{margin:0 0 12px;color:var(--muted);font-size:14px}
-  .plat .min{font-size:13px;color:var(--muted)}
+  .plat .min{font-size:13px;color:var(--muted);margin-top:10px}
+  /* Descarga directa por plataforma */
+  .plat .dl{margin:12px 0 0;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .dl a{display:inline-block;padding:9px 14px;border-radius:9px;font-weight:600;font-size:14px}
+  .dl a.primary{background:var(--accent);color:#14120b}
+  .dl a.ghost{border:1px solid var(--line);color:var(--text)}
+  .dl a.ghost:hover{background:var(--panel2)}
   .footer{text-align:center;color:var(--muted);font-size:14px;padding:40px 0 60px;border-top:1px solid var(--line)}
   .badge{display:inline-block;background:var(--panel2);border:1px solid var(--line);border-radius:8px;
          padding:6px 12px;margin:6px 4px;font-size:13px;color:var(--text)}
@@ -114,16 +120,24 @@
           <p style="color:var(--muted);font-size:13px">v1.4.9 incluye la <b>actualización de
              seguridad</b> (escrituras serializadas, validación de datos, inventario sin
              duplicados y exportaciones CSV seguras).</p>
-          <div class="min">CerveceraVGB.apk · v1.4.9</div></div>
+          <div class="min">CerveceraVGB.apk · v1.4.9</div>
+          <div class="dl"><a class="primary" href="https://github.com/saintwick47/cervecera-vgb/releases/latest/download/CerveceraVGB.apk">⬇️ Descargar APK</a></div></div>
         <div class="plat"><div class="ico">🪟</div><h3>Windows</h3>
           <p>Instalador con acceso directo y logo en el escritorio.</p>
-          <div class="min">CerveceraVGB-Setup-*.exe</div></div>
+          <div class="min">CerveceraVGB-Setup-1.4.9.exe</div>
+          <div class="dl"><a class="primary" href="https://github.com/saintwick47/cervecera-vgb/releases/latest/download/CerveceraVGB-Setup-1.4.9.exe">⬇️ Descargar .exe</a></div></div>
         <div class="plat"><div class="ico">🐧</div><h3>Linux</h3>
           <p><b>.deb</b> (doble clic → instalar → menú), <b>.rpm</b> o <b>AppImage</b> portable.</p>
-          <div class="min">CerveceraVGB-*-x86_64.deb · *.rpm · *.AppImage</div></div>
+          <div class="min">CerveceraVGB-1.4.9-x86_64.deb · .rpm · .AppImage</div>
+          <div class="dl">
+            <a class="primary" href="https://github.com/saintwick47/cervecera-vgb/releases/latest/download/CerveceraVGB-1.4.9-x86_64.deb">⬇️ .deb</a>
+            <a class="ghost" href="https://github.com/saintwick47/cervecera-vgb/releases/latest/download/CerveceraVGB-1.4.9-x86_64.rpm">.rpm</a>
+            <a class="ghost" href="https://github.com/saintwick47/cervecera-vgb/releases/latest/download/CerveceraVGB-1.4.9-x86_64.AppImage">AppImage</a>
+          </div></div>
         <div class="plat"><div class="ico">🍎</div><h3>macOS</h3>
           <p>DMG para Apple Silicon (M1 o posterior).</p>
-          <div class="min">CerveceraVGB-*-macos-arm64.dmg</div></div>
+          <div class="min">CerveceraVGB-1.4.9-macos-arm64.dmg</div>
+          <div class="dl"><a class="primary" href="https://github.com/saintwick47/cervecera-vgb/releases/latest/download/CerveceraVGB-1.4.9-macos-arm64.dmg">⬇️ Descargar .dmg</a></div></div>
       </div>
       <p style="text-align:center;margin-top:22px;color:var(--muted);font-size:14px">
         🐧 En <b>Ubuntu/Debian/Mint</b> usá el <b>.deb</b>: doble clic → Instalar → abrís desde el menú de aplicaciones (sin terminal).
